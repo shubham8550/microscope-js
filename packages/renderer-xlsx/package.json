@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-xlsx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "XLSX / CSV renderer for microscope-js (uses SheetJS)",
   "license": "MIT",
   "type": "module",
