@@ -51,9 +51,9 @@ async function renderPdf(ctx: RenderContext): Promise<PdfHandle> {
   }
 
   const data = await readAll(ctx.source.blob);
-  // pdfjs v5 dropped the `isEvalSupported` option (eval is disabled by default).
-  // disableAutoFetch is also no longer a public field in v5's types, but it still
-  // works at runtime, so we cast to keep the safety hardening.
+  // pdfjs v5 dropped the legacy `isEvalSupported` option (no longer needed — v5
+  // sandboxes JS execution by default). `disableAutoFetch` is no longer a public
+  // type but still respected at runtime, so we cast to retain the hardening.
   const loadingTask = pdfjs.getDocument({
     data,
     disableAutoFetch: true,
