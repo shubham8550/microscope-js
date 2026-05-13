@@ -10,7 +10,8 @@
       "!**/.next",
       "!**/node_modules",
       "!**/coverage",
-      "!**/docs-site"
+      "!**/docs-site",
+      "!apps/demo/next-env.d.ts"
     ]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
