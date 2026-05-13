@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-video",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Video renderer for microscope-js (mp4, webm, ogg, mov)",
   "license": "MIT",
   "type": "module",

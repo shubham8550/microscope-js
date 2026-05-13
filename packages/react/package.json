@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/react",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "React + Next.js adapter for microscope-js (Viewer component + useViewer hook)",
   "license": "MIT",
   "type": "module",

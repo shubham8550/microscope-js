@@ -1,5 +1,13 @@
 # @microscope-js/renderer-pdf
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [b59760b]
+  - @microscope-js/core@0.1.4
+  - @microscope-js/utils@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes

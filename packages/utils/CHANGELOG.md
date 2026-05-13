@@ -1,5 +1,11 @@
 # @microscope-js/utils
 
+## 0.1.4
+
+### Patch Changes
+
+- b59760b: Rebuild + republish with the upgraded toolchain (TypeScript 6, Biome 2, latest `@types/node`) so every package's published artifact and SLSA provenance attestation match the same build environment.
+
 ## 0.1.2
 
 ### Patch Changes

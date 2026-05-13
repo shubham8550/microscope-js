@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/core",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Framework-agnostic core for microscope-js: Renderer interface + registry + mount() entry point",
   "license": "MIT",
   "type": "module",

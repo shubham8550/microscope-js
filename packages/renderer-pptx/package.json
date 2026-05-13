@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-pptx",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "PPTX (PowerPoint) renderer for microscope-js (JSZip + DOMPurify)",
   "license": "MIT",
   "type": "module",
