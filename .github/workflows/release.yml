@@ -25,11 +25,14 @@ jobs:
 
       - uses: pnpm/action-setup@v4
 
+      # NOTE: deliberately omit `registry-url` — setup-node otherwise writes
+      # a temp .npmrc with `_authToken=${NODE_AUTH_TOKEN}`. changesets/action
+      # then injects a placeholder token there, which makes npm think it's
+      # authenticated and skip the OIDC trusted-publisher exchange.
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
 
       # Trusted Publisher OIDC exchange requires npm >= 11.5
       - name: Pin npm to a Trusted-Publisher-capable version
