@@ -29,7 +29,7 @@ jobs:
       # a temp .npmrc with `_authToken=${NODE_AUTH_TOKEN}`. changesets/action
       # then injects a placeholder token there, which makes npm think it's
       # authenticated and skip the OIDC trusted-publisher exchange.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
