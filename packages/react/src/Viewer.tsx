@@ -53,9 +53,7 @@ export function Viewer({
   return (
     <div className={className} style={{ ...DEFAULT_STYLE, ...style }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
-      {!source && (
-        <Overlay>{emptyFallback ?? <span>No file selected</span>}</Overlay>
-      )}
+      {!source && <Overlay>{emptyFallback ?? <span>No file selected</span>}</Overlay>}
       {loading && <Overlay>{loadingFallback ?? <span>Loading…</span>}</Overlay>}
       {error && (
         <Overlay tone="error">

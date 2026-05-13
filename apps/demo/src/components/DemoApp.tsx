@@ -38,19 +38,13 @@ export function DemoApp() {
   return (
     <main style={{ maxWidth: 1100, margin: '0 auto', padding: '40px 24px' }}>
       <header style={{ textAlign: 'center', marginBottom: 32 }}>
-        <h1 style={{ fontSize: 36, margin: 0, letterSpacing: '-0.02em' }}>
-          🔬 microscope-js
-        </h1>
+        <h1 style={{ fontSize: 36, margin: 0, letterSpacing: '-0.02em' }}>🔬 microscope-js</h1>
         <p style={{ color: '#94a3b8', marginTop: 8 }}>
           100% client-side file viewer — drop a file to preview it. Nothing is uploaded.
         </p>
       </header>
 
-      <Dropzone
-        onFile={setFile}
-        onClick={() => inputRef.current?.click()}
-        hasFile={!!file}
-      />
+      <Dropzone onFile={setFile} onClick={() => inputRef.current?.click()} hasFile={!!file} />
 
       <input
         ref={inputRef}
@@ -72,11 +66,7 @@ export function DemoApp() {
             border: '1px solid #1f2937',
             borderRadius: 12,
           }}
-          emptyFallback={
-            <div style={{ color: '#64748b' }}>
-              Select a file above to preview it
-            </div>
-          }
+          emptyFallback={<div style={{ color: '#64748b' }}>Select a file above to preview it</div>}
         />
       </section>
 
@@ -97,11 +87,7 @@ export function DemoApp() {
           fontSize: 13,
         }}
       >
-        <a
-          href="https://github.com/shubham8550/microscope-js"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://github.com/shubham8550/microscope-js" target="_blank" rel="noreferrer">
           GitHub
         </a>
         {' · '}

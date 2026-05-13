@@ -1,4 +1,4 @@
-import { extOf, mimeMatches, type NormalizedSource } from '@microscope-js/utils';
+import { extOf, mimeMatches } from '@microscope-js/utils';
 import type { Registry, RegistryEntry, Renderer } from './types.js';
 
 /**
@@ -10,9 +10,7 @@ import type { Registry, RegistryEntry, Renderer } from './types.js';
  *   2. Otherwise match by MIME, then by extension, then by sniffed MIME.
  *   3. Highest priority wins.
  */
-export function createRegistry(
-  renderers: ReadonlyArray<Renderer | RegistryEntry>,
-): Registry {
+export function createRegistry(renderers: ReadonlyArray<Renderer | RegistryEntry>): Registry {
   const entries: RegistryEntry[] = renderers.map((r, i) =>
     'renderer' in r ? r : { renderer: r, priority: i },
   );

@@ -1,5 +1,5 @@
-import type { NormalizedSource } from './source.js';
 import { createEl, objectUrl } from './dom.js';
+import type { NormalizedSource } from './source.js';
 
 /**
  * Shared body for native-media renderers (`<video>`, `<audio>`).

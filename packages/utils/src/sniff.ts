@@ -21,7 +21,11 @@ const SIGNATURES: ReadonlyArray<{
   { mime: 'application/zip', offset: 0, bytes: [0x50, 0x4b, 0x05, 0x06] },
   // Audio
   { mime: 'audio/mpeg', offset: 0, bytes: [0x49, 0x44, 0x33] }, // ID3
-  { mime: 'audio/wav', offset: 0, bytes: [0x52, 0x49, 0x46, 0x46, null, null, null, null, 0x57, 0x41, 0x56, 0x45] },
+  {
+    mime: 'audio/wav',
+    offset: 0,
+    bytes: [0x52, 0x49, 0x46, 0x46, null, null, null, null, 0x57, 0x41, 0x56, 0x45],
+  },
   { mime: 'audio/flac', offset: 0, bytes: [0x66, 0x4c, 0x61, 0x43] },
   // Video
   { mime: 'video/mp4', offset: 4, bytes: [0x66, 0x74, 0x79, 0x70] },

@@ -93,9 +93,7 @@ export const pptxRenderer: Renderer = {
           boxSizing: 'border-box',
         },
       });
-      const html = slide.paragraphs
-        .map((p) => `<p>${escapeAndJoin(p)}</p>`)
-        .join('');
+      const html = slide.paragraphs.map((p) => `<p>${escapeAndJoin(p)}</p>`).join('');
       card.innerHTML = sanitizeHtml(html);
       root.appendChild(card);
       slideEls.push(card);
@@ -157,11 +155,7 @@ function escapeAndJoin(runs: string[]): string {
   // We re-escape because runs become HTML; DOMPurify is the final safety net.
   return runs
     .map((r) =>
-      r
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;'),
+      r.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'),
     )
     .join(' ');
 }

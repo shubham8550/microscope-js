@@ -1,7 +1,7 @@
 import {
   MicroscopeError,
-  type RenderHandle,
   type Registry,
+  type RenderHandle,
   type Source,
   mount,
 } from '@microscope-js/core';
@@ -65,10 +65,7 @@ export function useViewer({
       })
       .catch((err) => {
         if (!active) return;
-        const e =
-          err instanceof Error
-            ? err
-            : new MicroscopeError(String(err), 'RENDER_FAILED');
+        const e = err instanceof Error ? err : new MicroscopeError(String(err), 'RENDER_FAILED');
         setError(e);
       })
       .finally(() => {

@@ -1,9 +1,4 @@
-import {
-  MicroscopeError,
-  clearContainer,
-  normalizeSource,
-  sniffMime,
-} from '@microscope-js/utils';
+import { MicroscopeError, clearContainer, normalizeSource, sniffMime } from '@microscope-js/utils';
 import type { MountOptions, RenderHandle } from './types.js';
 
 /**
@@ -27,9 +22,7 @@ export async function mount(opts: MountOptions): Promise<RenderHandle> {
     normalized.mime = await sniffMime(normalized.blob);
   }
 
-  const renderer = rendererId
-    ? registry.get(rendererId)
-    : await registry.match(normalized);
+  const renderer = rendererId ? registry.get(rendererId) : await registry.match(normalized);
 
   if (!renderer) {
     throw new MicroscopeError(
