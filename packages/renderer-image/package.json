@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-image",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Image renderer for microscope-js (png, jpg, gif, webp, svg, avif, bmp)",
   "license": "MIT",
   "type": "module",
@@ -15,7 +15,10 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -31,5 +34,7 @@
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-xlsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "XLSX / CSV renderer for microscope-js (uses SheetJS)",
   "license": "MIT",
   "type": "module",
@@ -15,7 +15,10 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -32,5 +35,7 @@
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }
