@@ -1,0 +1,26 @@
+name: Bug report
+description: File a bug — please include a reproducible example.
+title: "[bug] "
+labels: [bug]
+body:
+  - type: input
+    attributes:
+      label: Affected package
+      placeholder: "@microscope-js/renderer-pdf"
+    validations: { required: true }
+  - type: input
+    attributes:
+      label: Version
+    validations: { required: true }
+  - type: textarea
+    attributes:
+      label: Reproduction
+      description: A minimal repo / CodeSandbox link. Please don't paste large file contents.
+    validations: { required: true }
+  - type: textarea
+    attributes:
+      label: Expected vs actual
+    validations: { required: true }
+  - type: input
+    attributes:
+      label: Browser + OS

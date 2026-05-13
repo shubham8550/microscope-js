@@ -1,0 +1,26 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "microscope-js",
+  "out": "docs-site",
+  "entryPointStrategy": "packages",
+  "entryPoints": [
+    "packages/core",
+    "packages/utils",
+    "packages/react",
+    "packages/renderer-pdf",
+    "packages/renderer-image",
+    "packages/renderer-video",
+    "packages/renderer-audio",
+    "packages/renderer-docx",
+    "packages/renderer-xlsx",
+    "packages/renderer-pptx",
+    "packages/renderer-text"
+  ],
+  "includeVersion": true,
+  "hideGenerator": true,
+  "githubPages": false,
+  "navigationLinks": {
+    "Demo": "https://shubham8550.github.io/microscope-js",
+    "GitHub": "https://github.com/shubham8550/microscope-js"
+  }
+}

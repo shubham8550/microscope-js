@@ -1,0 +1,33 @@
+{
+  "name": "@microscope-js/demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'no tests in demo'"
+  },
+  "dependencies": {
+    "@microscope-js/core": "workspace:*",
+    "@microscope-js/react": "workspace:*",
+    "@microscope-js/renderer-audio": "workspace:*",
+    "@microscope-js/renderer-docx": "workspace:*",
+    "@microscope-js/renderer-image": "workspace:*",
+    "@microscope-js/renderer-pdf": "workspace:*",
+    "@microscope-js/renderer-pptx": "workspace:*",
+    "@microscope-js/renderer-text": "workspace:*",
+    "@microscope-js/renderer-video": "workspace:*",
+    "@microscope-js/renderer-xlsx": "workspace:*",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "typescript": "^5.7.2"
+  }
+}
