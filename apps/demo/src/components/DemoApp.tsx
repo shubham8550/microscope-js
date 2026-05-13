@@ -1,6 +1,6 @@
 'use client';
 
-import { Viewer, useRegistry } from '@microscope-js/react';
+import { useRegistry, Viewer } from '@microscope-js/react';
 import { audioRenderer } from '@microscope-js/renderer-audio';
 import { docxRenderer } from '@microscope-js/renderer-docx';
 import { imageRenderer } from '@microscope-js/renderer-image';

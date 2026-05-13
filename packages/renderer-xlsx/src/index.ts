@@ -1,8 +1,8 @@
-import type { RenderHandle, Renderer } from '@microscope-js/core';
+import type { Renderer, RenderHandle } from '@microscope-js/core';
 import {
-  MicroscopeError,
   assertMaxSize,
   createEl,
+  MicroscopeError,
   readAll,
   sanitizeHtml,
 } from '@microscope-js/utils';

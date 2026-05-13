@@ -64,13 +64,7 @@ export function Viewer({
   );
 }
 
-function Overlay({
-  children,
-  tone,
-}: {
-  children: ReactNode;
-  tone?: 'error';
-}) {
+function Overlay({ children, tone }: { children: ReactNode; tone?: 'error' }) {
   return (
     <div
       style={{

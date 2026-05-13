@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { ByteBudget, assertSafeZipEntry } from './zip-safety.js';
+import { assertSafeZipEntry, ByteBudget } from './zip-safety.js';
 
 describe('assertSafeZipEntry', () => {
   it('accepts ordinary paths', () => {

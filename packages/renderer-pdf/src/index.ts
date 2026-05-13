@@ -1,5 +1,5 @@
-import type { RenderContext, RenderHandle, Renderer } from '@microscope-js/core';
-import { MicroscopeError, assertMaxSize, createEl, readAll } from '@microscope-js/utils';
+import type { RenderContext, Renderer, RenderHandle } from '@microscope-js/core';
+import { assertMaxSize, createEl, MicroscopeError, readAll } from '@microscope-js/utils';
 
 export interface PdfOptions {
   /** Reject PDFs larger than this many bytes (default 256 MB). */
@@ -51,7 +51,13 @@ async function renderPdf(ctx: RenderContext): Promise<PdfHandle> {
   }
 
   const data = await readAll(ctx.source.blob);
-  const loadingTask = pdfjs.getDocument({ data, isEvalSupported: false, disableAutoFetch: true });
+  // pdfjs v5 dropped the `isEvalSupported` option (eval is disabled by default).
+  // disableAutoFetch is also no longer a public field in v5's types, but it still
+  // works at runtime, so we cast to keep the safety hardening.
+  const loadingTask = pdfjs.getDocument({
+    data,
+    disableAutoFetch: true,
+  } as Parameters<typeof pdfjs.getDocument>[0]);
   ctx.signal?.addEventListener('abort', () => loadingTask.destroy(), { once: true });
 
   const doc = await loadingTask.promise;

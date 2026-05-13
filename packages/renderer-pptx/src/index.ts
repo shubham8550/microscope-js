@@ -1,10 +1,10 @@
-import type { RenderHandle, Renderer } from '@microscope-js/core';
+import type { Renderer, RenderHandle } from '@microscope-js/core';
 import {
-  ByteBudget,
-  MicroscopeError,
   assertMaxSize,
   assertSafeZipEntry,
+  ByteBudget,
   createEl,
+  MicroscopeError,
   sanitizeHtml,
 } from '@microscope-js/utils';
 

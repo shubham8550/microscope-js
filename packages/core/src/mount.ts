@@ -1,4 +1,4 @@
-import { MicroscopeError, clearContainer, normalizeSource, sniffMime } from '@microscope-js/utils';
+import { clearContainer, MicroscopeError, normalizeSource, sniffMime } from '@microscope-js/utils';
 import type { MountOptions, RenderHandle } from './types.js';
 
 /**

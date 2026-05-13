@@ -1,5 +1,5 @@
 import type { Renderer } from '@microscope-js/core';
-import { MicroscopeError, assertMaxSize, createEl, sanitizeHtml } from '@microscope-js/utils';
+import { assertMaxSize, createEl, MicroscopeError, sanitizeHtml } from '@microscope-js/utils';
 
 export interface DocxOptions {
   /** Reject docx files larger than this many bytes (default 64 MB). */

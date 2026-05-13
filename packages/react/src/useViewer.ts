@@ -1,9 +1,9 @@
 import {
   MicroscopeError,
+  mount,
   type Registry,
   type RenderHandle,
   type Source,
-  mount,
 } from '@microscope-js/core';
 import { useEffect, useRef, useState } from 'react';
 

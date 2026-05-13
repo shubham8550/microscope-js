@@ -2,7 +2,7 @@
   "name": "microscope-js",
   "version": "0.0.0",
   "private": true,
-  "description": "Open-source JS/React/Next.js library for client-side rendering of PDF, Office, image, video and audio formats — no server dependencies",
+  "description": "Open-source JS/React/Next.js library for client-side rendering of PDF, Office, image, video and audio formats \u2014 no server dependencies",
   "license": "MIT",
   "author": "microscope-js contributors",
   "homepage": "https://shubham8550.github.io/microscope-js",
@@ -13,7 +13,10 @@
   "bugs": {
     "url": "https://github.com/shubham8550/microscope-js/issues"
   },
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "build": "pnpm -r --filter \"./packages/**\" run build",
     "dev": "pnpm -r --parallel run dev",
@@ -31,13 +34,13 @@
     "clean": "pnpm -r exec rm -rf dist .turbo node_modules && rm -rf node_modules"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.4.15",
     "@changesets/cli": "^2.27.11",
-    "@types/node": "^22.10.0",
+    "@types/node": "^25.7.0",
     "tsup": "^8.3.5",
-    "typedoc": "^0.27.5",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "typedoc": "^0.28.19",
+    "typescript": "^6.0.3",
+    "vitest": "^2.1.9"
   },
   "packageManager": "pnpm@9.15.0",
   "engines": {

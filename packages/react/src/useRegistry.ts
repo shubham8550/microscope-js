@@ -1,4 +1,4 @@
-import { type Registry, type Renderer, createRegistry } from '@microscope-js/core';
+import { createRegistry, type Registry, type Renderer } from '@microscope-js/core';
 import { useMemo } from 'react';
 
 /**
