@@ -27,9 +27,16 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org
+
+      # Trusted Publisher OIDC exchange requires npm >= 11.5
+      - name: Pin npm to a Trusted-Publisher-capable version
+        run: |
+          corepack enable
+          corepack prepare npm@11.6.2 --activate
+          npm --version
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
