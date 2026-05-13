@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
       # NOTE: deliberately omit `registry-url` — setup-node otherwise writes
       # a temp .npmrc with `_authToken=${NODE_AUTH_TOKEN}`. changesets/action
