@@ -12,8 +12,8 @@ jobs:
   release:
     name: Version + publish
     runs-on: ubuntu-latest
-    # OIDC trusted publishing to npm — no NPM_TOKEN secret required.
-    # Configure each package's trusted publisher at https://www.npmjs.com/package/<name>/access
+    # NPM_TOKEN auth + SLSA provenance via GitHub OIDC.
+    # (Optional future migration to fully tokenless Trusted Publishers — see RELEASING.md)
     permissions:
       contents: write
       pull-requests: write
@@ -42,5 +42,7 @@ jobs:
           title: "chore: release"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Enables SLSA provenance — uses GitHub OIDC, no NPM_TOKEN secret needed
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # SLSA provenance attestation alongside token auth
           NPM_CONFIG_PROVENANCE: 'true'
