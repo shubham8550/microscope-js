@@ -55,5 +55,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # SLSA provenance + tokenless trusted publishing via GitHub OIDC
           NPM_CONFIG_PROVENANCE: 'true'
-          # Verbose npm logging to capture the OIDC exchange path + response
-          NPM_CONFIG_LOGLEVEL: 'silly'

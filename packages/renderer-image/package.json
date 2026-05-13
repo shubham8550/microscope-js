@@ -36,5 +36,14 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shubham8550/microscope-js.git",
+    "directory": "packages/renderer-image"
+  },
+  "homepage": "https://github.com/shubham8550/microscope-js/tree/main/packages/renderer-image#readme",
+  "bugs": {
+    "url": "https://github.com/shubham8550/microscope-js/issues"
   }
 }
