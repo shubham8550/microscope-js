@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared helpers for microscope-js: source normalization, MIME sniffing, HTML sanitization, zip-safety",
   "license": "MIT",
   "type": "module",
