@@ -1,5 +1,11 @@
 # @microscope-js/renderer-pdf
 
+## 0.1.3
+
+### Patch Changes
+
+- 69bb65d: Upgrade `pdfjs-dist` 4.10.x → 5.7.x. Drops the `isEvalSupported: false` option (PDF.js v5 disables `eval` by default), keeps `disableAutoFetch: true` for the same safety hardening.
+
 ## 0.1.2
 
 ### Patch Changes
