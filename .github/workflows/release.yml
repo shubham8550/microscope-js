@@ -30,10 +30,6 @@ jobs:
           cache: pnpm
           registry-url: https://registry.npmjs.org
 
-      # Trusted Publishers (OIDC-only, no NPM_TOKEN) needs npm >= 11.5
-      - name: Use latest npm for trusted publishing
-        run: npm install -g npm@latest
-
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
 
