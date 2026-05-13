@@ -43,4 +43,4 @@ pnpm demo            # http://localhost:3000
 
 ## Releasing
 
-Maintainers only — the `release` workflow on `main` consumes pending changesets and publishes to npm.
+Maintainers only — the `release` workflow on `main` consumes pending changesets and publishes to npm via [npm Trusted Publishers (OIDC)](./RELEASING.md). No NPM_TOKEN is required.
