@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Framework-agnostic core for microscope-js: Renderer interface + registry + mount() entry point",
   "license": "MIT",
   "type": "module",
@@ -15,7 +15,10 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -30,5 +33,7 @@
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }
