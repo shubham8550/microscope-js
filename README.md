@@ -7,7 +7,14 @@
 Render PDF, DOCX, XLSX, PPTX, images, video, and audio in the browser — no Microsoft/Google viewer iframes, no upload to a backend, no document ever leaves the user's machine.
 
 [![CI](https://github.com/shubham8550/microscope-js/actions/workflows/ci.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/ci.yml)
+[![Release](https://github.com/shubham8550/microscope-js/actions/workflows/release.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/release.yml)
+[![Pages](https://github.com/shubham8550/microscope-js/actions/workflows/pages.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@microscope-js/react?label=%40microscope-js%2Freact&color=cb3837&logo=npm)](https://www.npmjs.com/package/@microscope-js/react)
+[![npm downloads](https://img.shields.io/npm/dm/@microscope-js/react?label=downloads&color=cb3837&logo=npm)](https://www.npmjs.com/package/@microscope-js/react)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@microscope-js/react?label=%40microscope-js%2Freact%20gzip)](https://bundlephobia.com/package/@microscope-js/react)
+[![Provenance](https://img.shields.io/badge/SLSA-provenance-blueviolet?logo=npm)](https://docs.npmjs.com/generating-provenance-statements)
+[![OIDC Trusted Publisher](https://img.shields.io/badge/npm-trusted%20publisher-success?logo=npm)](https://docs.npmjs.com/trusted-publishers)
 [![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://shubham8550.github.io/microscope-js)
 [![Docs](https://img.shields.io/badge/docs-typedoc-purple)](https://shubham8550.github.io/microscope-js/docs)
 
@@ -25,18 +32,21 @@ Render PDF, DOCX, XLSX, PPTX, images, video, and audio in the browser — no Mic
 | Framework lock-in   | jQuery / vendor SDK                      | Plain JS core + thin React adapter            |
 | Vulnerabilities     | Mixed                                    | Sandboxed iframes, sanitized HTML, no `eval`  |
 
-## Supported formats
+## Packages
 
-| Format            | Package                              | Engine                |
-| ----------------- | ------------------------------------ | --------------------- |
-| PDF               | `@microscope-js/renderer-pdf`        | `pdfjs-dist`          |
-| DOCX              | `@microscope-js/renderer-docx`       | `mammoth` + DOMPurify |
-| XLSX / XLS / CSV  | `@microscope-js/renderer-xlsx`       | `xlsx`                |
-| PPTX              | `@microscope-js/renderer-pptx`       | JSZip + canvas        |
-| Image (png/jpg/gif/webp/svg/avif) | `@microscope-js/renderer-image` | native `<img>`        |
-| Video (mp4/webm/ogg) | `@microscope-js/renderer-video`   | native `<video>`      |
-| Audio (mp3/wav/ogg/flac) | `@microscope-js/renderer-audio` | native `<audio>`     |
-| Plain text / code | `@microscope-js/renderer-text`       | DOMPurify             |
+| Package | Version | Min+gzip | Description |
+| ------- | ------- | -------- | ----------- |
+| [`@microscope-js/core`](./packages/core)                       | [![npm](https://img.shields.io/npm/v/@microscope-js/core?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/core)                       | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/core?label=)](https://bundlephobia.com/package/@microscope-js/core)                       | Framework-agnostic registry + `mount()` |
+| [`@microscope-js/utils`](./packages/utils)                     | [![npm](https://img.shields.io/npm/v/@microscope-js/utils?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/utils)                     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/utils?label=)](https://bundlephobia.com/package/@microscope-js/utils)                     | Source / MIME / sanitize helpers |
+| [`@microscope-js/react`](./packages/react)                     | [![npm](https://img.shields.io/npm/v/@microscope-js/react?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/react)                     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/react?label=)](https://bundlephobia.com/package/@microscope-js/react)                     | React / Next.js adapter, `<Viewer />` |
+| [`@microscope-js/renderer-pdf`](./packages/renderer-pdf)       | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-pdf?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-pdf)       | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-pdf?label=)](https://bundlephobia.com/package/@microscope-js/renderer-pdf)       | PDF via `pdfjs-dist` |
+| [`@microscope-js/renderer-docx`](./packages/renderer-docx)     | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-docx?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-docx)     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-docx?label=)](https://bundlephobia.com/package/@microscope-js/renderer-docx)     | Word `.docx` via `mammoth` + DOMPurify |
+| [`@microscope-js/renderer-xlsx`](./packages/renderer-xlsx)     | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-xlsx?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-xlsx)     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-xlsx?label=)](https://bundlephobia.com/package/@microscope-js/renderer-xlsx)     | Excel `.xlsx/.xls/.csv` via SheetJS |
+| [`@microscope-js/renderer-pptx`](./packages/renderer-pptx)     | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-pptx?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-pptx)     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-pptx?label=)](https://bundlephobia.com/package/@microscope-js/renderer-pptx)     | PowerPoint `.pptx` via JSZip |
+| [`@microscope-js/renderer-image`](./packages/renderer-image)   | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-image?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-image)   | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-image?label=)](https://bundlephobia.com/package/@microscope-js/renderer-image)   | png / jpg / gif / webp / svg / avif / bmp |
+| [`@microscope-js/renderer-video`](./packages/renderer-video)   | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-video?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-video)   | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-video?label=)](https://bundlephobia.com/package/@microscope-js/renderer-video)   | mp4 / webm / ogg / mov |
+| [`@microscope-js/renderer-audio`](./packages/renderer-audio)   | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-audio?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-audio)   | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-audio?label=)](https://bundlephobia.com/package/@microscope-js/renderer-audio)   | mp3 / wav / flac / ogg / aac |
+| [`@microscope-js/renderer-text`](./packages/renderer-text)     | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-text?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-text)     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-text?label=)](https://bundlephobia.com/package/@microscope-js/renderer-text)     | Plain text / source code |
 
 ## Quick start (React / Next.js)
 
