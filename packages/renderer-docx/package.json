@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-docx",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "DOCX (Word) renderer for microscope-js (uses mammoth + DOMPurify)",
   "license": "MIT",
   "type": "module",
