@@ -2,37 +2,73 @@
 
 # 🔬 microscope-js
 
-**A 100% client-side, zero-server file viewer for the web.**
+### **The file viewer for paranoid frontends.**
 
-Render PDF, DOCX, XLSX, PPTX, images, video, and audio in the browser — no Microsoft/Google viewer iframes, no upload to a backend, no document ever leaves the user's machine.
+Render PDF · Word · Excel · PowerPoint · image · video · audio — **entirely in the browser**.
+No Microsoft Online Viewer iframe. No Google Docs preview. No "we upload your file to our server first."
+The bytes never leave the tab.
 
+<!-- project health -->
 [![CI](https://github.com/shubham8550/microscope-js/actions/workflows/ci.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/ci.yml)
 [![Release](https://github.com/shubham8550/microscope-js/actions/workflows/release.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/release.yml)
 [![Pages](https://github.com/shubham8550/microscope-js/actions/workflows/pages.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/pages.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![npm version](https://img.shields.io/npm/v/@microscope-js/react?label=%40microscope-js%2Freact&color=cb3837&logo=npm)](https://www.npmjs.com/package/@microscope-js/react)
-[![npm downloads](https://img.shields.io/npm/dm/@microscope-js/react?label=downloads&color=cb3837&logo=npm)](https://www.npmjs.com/package/@microscope-js/react)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@microscope-js/react?label=%40microscope-js%2Freact%20gzip)](https://bundlephobia.com/package/@microscope-js/react)
+[![CodeQL](https://github.com/shubham8550/microscope-js/actions/workflows/security.yml/badge.svg)](https://github.com/shubham8550/microscope-js/actions/workflows/security.yml)
+
+<!-- npm -->
+[![npm](https://img.shields.io/npm/v/@microscope-js/react?label=npm&color=cb3837&logo=npm)](https://www.npmjs.com/package/@microscope-js/react)
+[![Downloads](https://img.shields.io/npm/dm/@microscope-js/react?color=cb3837&logo=npm)](https://www.npmjs.com/package/@microscope-js/react)
+[![Bundle](https://img.shields.io/bundlephobia/minzip/@microscope-js/react?label=gzip)](https://bundlephobia.com/package/@microscope-js/react)
+[![Tree-shakable](https://img.shields.io/badge/tree--shakable-✓-success)](#packages)
+[![Types](https://img.shields.io/npm/types/@microscope-js/react?logo=typescript)](https://www.typescriptlang.org/)
 [![Provenance](https://img.shields.io/badge/SLSA-provenance-blueviolet?logo=npm)](https://docs.npmjs.com/generating-provenance-statements)
-[![OIDC Trusted Publisher](https://img.shields.io/badge/npm-trusted%20publisher-success?logo=npm)](https://docs.npmjs.com/trusted-publishers)
-[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://shubham8550.github.io/microscope-js)
-[![Docs](https://img.shields.io/badge/docs-typedoc-purple)](https://shubham8550.github.io/microscope-js/docs)
+[![Trusted Publisher](https://img.shields.io/badge/npm-trusted%20publisher-success?logo=npm)](https://docs.npmjs.com/trusted-publishers)
+
+<!-- repo -->
+[![License](https://img.shields.io/github/license/shubham8550/microscope-js?color=blue)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/shubham8550/microscope-js?style=social)](https://github.com/shubham8550/microscope-js/stargazers)
+[![Forks](https://img.shields.io/github/forks/shubham8550/microscope-js?style=social)](https://github.com/shubham8550/microscope-js/network/members)
+[![Last commit](https://img.shields.io/github/last-commit/shubham8550/microscope-js)](https://github.com/shubham8550/microscope-js/commits/main)
+[![Issues](https://img.shields.io/github/issues/shubham8550/microscope-js)](https://github.com/shubham8550/microscope-js/issues)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+
+<!-- tech -->
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](./tsconfig.base.json)
+[![pnpm](https://img.shields.io/badge/pnpm-workspaces-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Changesets](https://img.shields.io/badge/Changesets-managed-22272e?logo=changesets)](./RELEASING.md)
+[![Biome](https://img.shields.io/badge/Biome-formatted-60A5FA?logo=biome&logoColor=white)](./biome.json)
+[![Vitest](https://img.shields.io/badge/tested%20with-vitest-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev/)
+
+**[🌐 Live demo](https://shubham8550.github.io/microscope-js)** · **[📚 API docs](https://shubham8550.github.io/microscope-js/docs)** · **[🐛 Issues](https://github.com/shubham8550/microscope-js/issues/new/choose)** · **[💬 Discussions](https://github.com/shubham8550/microscope-js/discussions)**
 
 </div>
 
 ---
 
-## Why microscope-js
+## ✨ Why people pick microscope-js
 
-| Concern             | Other viewers                            | microscope-js                                 |
-| ------------------- | ---------------------------------------- | --------------------------------------------- |
-| Network round-trip  | Uploads file to MS/Google viewer service | Never leaves the browser                      |
-| Privacy             | Document seen by third party             | Document seen by user only                    |
-| Bundle size         | Monolithic                               | Per-format packages — pay only for what you use |
-| Framework lock-in   | jQuery / vendor SDK                      | Plain JS core + thin React adapter            |
-| Vulnerabilities     | Mixed                                    | Sandboxed iframes, sanitized HTML, no `eval`  |
+- **🔒 Zero data exfiltration.** Documents are parsed in the user's browser. No backend round-trip, no third-party iframe, no telemetry.
+- **🪶 Pay for what you use.** Every format lives in its own npm package; tree-shake or dynamic-import only what your app actually needs.
+- **⚛️ React & Next.js native.** `'use client'`, drop in `<Viewer />`, done. The hook works with Suspense and the App Router.
+- **🧩 Pluggable.** A renderer is 30 lines of TypeScript implementing one interface. Add a new format in an afternoon.
+- **🛡️ Hardened by default.** DOMPurify-sanitized HTML, zip-slip & zip-bomb defenses, size caps, no `eval`, no `dangerouslySetInnerHTML` of user content.
+- **🔏 Signed releases.** Every npm version ships with SLSA provenance via GitHub OIDC trusted publishing — verifiable build origin, no tokens involved.
 
-## Packages
+## 🎬 Try it now
+
+> **[👉 shubham8550.github.io/microscope-js](https://shubham8550.github.io/microscope-js)**
+
+Drop any of these onto the page — it renders locally:
+
+- 📄 `*.pdf`
+- 📝 `*.docx` &nbsp; `*.doc`
+- 📊 `*.xlsx` &nbsp; `*.xls` &nbsp; `*.csv` &nbsp; `*.tsv` &nbsp; `*.ods`
+- 📽️ `*.pptx`
+- 🖼️ `*.png` `*.jpg` `*.gif` `*.webp` `*.svg` `*.avif` `*.bmp`
+- 🎞️ `*.mp4` `*.webm` `*.ogg` `*.mov` `*.mkv`
+- 🎵 `*.mp3` `*.wav` `*.flac` `*.aac` `*.m4a` `*.opus`
+- 💻 `*.txt` `*.md` `*.json` `*.yaml` and every common source-code extension
+
+## 📦 Packages
 
 | Package | Version | Min+gzip | Description |
 | ------- | ------- | -------- | ----------- |
@@ -48,7 +84,9 @@ Render PDF, DOCX, XLSX, PPTX, images, video, and audio in the browser — no Mic
 | [`@microscope-js/renderer-audio`](./packages/renderer-audio)   | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-audio?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-audio)   | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-audio?label=)](https://bundlephobia.com/package/@microscope-js/renderer-audio)   | mp3 / wav / flac / ogg / aac |
 | [`@microscope-js/renderer-text`](./packages/renderer-text)     | [![npm](https://img.shields.io/npm/v/@microscope-js/renderer-text?color=cb3837&label=)](https://www.npmjs.com/package/@microscope-js/renderer-text)     | [![size](https://img.shields.io/bundlephobia/minzip/@microscope-js/renderer-text?label=)](https://bundlephobia.com/package/@microscope-js/renderer-text)     | Plain text / source code |
 
-## Quick start (React / Next.js)
+## 🚀 Quick start
+
+### React / Next.js
 
 ```bash
 pnpm add @microscope-js/react @microscope-js/renderer-pdf @microscope-js/renderer-image
@@ -60,29 +98,54 @@ import { Viewer, useRegistry } from '@microscope-js/react';
 import { pdfRenderer } from '@microscope-js/renderer-pdf';
 import { imageRenderer } from '@microscope-js/renderer-image';
 
-export default function Page({ file }: { file: File }) {
+export default function FilePreview({ file }: { file: File }) {
   const registry = useRegistry([pdfRenderer, imageRenderer]);
   return <Viewer source={file} registry={registry} style={{ height: 600 }} />;
 }
 ```
 
-## Quick start (plain JS)
+`<Viewer />` accepts a `File`, `Blob`, `ArrayBuffer`, `Uint8Array`, `URL`, or a `string` URL — anything you have on hand.
 
-```js
+### Plain JS / Vue / Svelte / vanilla
+
+```ts
 import { createRegistry, mount } from '@microscope-js/core';
 import { pdfRenderer } from '@microscope-js/renderer-pdf';
 
 const registry = createRegistry([pdfRenderer]);
 const handle = await mount({
   source: fileInput.files[0],
-  container: document.getElementById('viewer'),
+  container: document.getElementById('viewer')!,
   registry,
 });
-// later
+// later...
 handle.destroy();
 ```
 
-## Architecture
+### Hook-only (custom UI)
+
+```tsx
+const { containerRef, loading, error, handle } = useViewer({ source, registry });
+return (
+  <div ref={containerRef} className="my-toolbar-frame">
+    {handle?.capabilities?.pageCount /* renderer-specific extras */}
+  </div>
+);
+```
+
+## 🆚 How it compares
+
+| Concern                | MS Office iframe          | Google Docs viewer        | docx-preview / etc.       | **microscope-js**                                |
+| ---------------------- | ------------------------- | ------------------------- | ------------------------- | ------------------------------------------------ |
+| File leaves the device | ✅ uploads to Microsoft    | ✅ uploads to Google       | ❌                         | ❌                                                |
+| Works offline          | ❌                         | ❌                         | partial                   | ✅                                                |
+| Formats covered        | Office only               | Office + PDF              | one per library           | PDF + Office + media + image + code, one API     |
+| Bundle cost            | iframe (heavy)            | iframe (heavy)            | one library, monolithic   | ~1–5 KB core + per-format packages, tree-shakable |
+| React + Next.js / SSR  | ⚠️ iframe                  | ⚠️ iframe                  | varies                    | ✅ first-class, SSR-safe                          |
+| Provenance / signing   | n/a                       | n/a                       | usually unsigned          | ✅ SLSA + npm trusted publisher                   |
+| License                | proprietary               | proprietary               | mixed                     | MIT                                              |
+
+## 🏗️ Architecture
 
 ```
                 ┌─────────────────────────────────┐
@@ -104,54 +167,77 @@ handle.destroy();
                 └─────────────────────────────────┘
 ```
 
-Every renderer ships its own package. Tree-shaking + per-format dynamic imports keep the bundle minimal.
+The `core` package defines exactly one interface (`Renderer`) and one registry. Every format implementation lives in its own npm package and is loaded via dynamic `import()` so first-paint pays only for `core` + `react`.
 
-## Repository layout
+## 🛡️ Security model
+
+| Threat                          | Mitigation                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------ |
+| HTML in Office documents        | All renderer output passes through DOMPurify with a hardened allowlist                           |
+| Zip-slip (`..` in DOCX/XLSX/PPTX) | Archive entries with parent-dir or absolute paths are rejected before extraction                |
+| Zip bombs                       | `ByteBudget` caps total uncompressed bytes (default 512 MB)                                      |
+| Oversized PDFs                  | Configurable `maxBytes` / `maxPages` per renderer                                                |
+| SVG / XML XSS                   | SVGs are mounted via `<img>` (no script execution); inline SVG is sanitized                      |
+| Dynamic JS                      | No `eval`, no `new Function`, no `dangerouslySetInnerHTML` of user content — CI greps for these |
+| Supply-chain                    | Every published tarball is signed with SLSA provenance via npm OIDC trusted publishing           |
+
+See **[SECURITY.md](./SECURITY.md)** to report a vulnerability privately.
+
+## 🧪 Development
+
+```bash
+pnpm install
+pnpm build           # build all packages
+pnpm test            # vitest across the monorepo
+pnpm typecheck       # tsc --noEmit, per package
+pnpm lint            # biome check
+pnpm demo            # localhost:3000
+pnpm docs            # TypeDoc -> ./docs-site
+```
 
 ```
 microscope-js/
 ├── packages/
-│   ├── core/                 # framework-agnostic registry + types
-│   ├── utils/                # shared sniffing / source helpers
-│   ├── react/                # React + Next.js adapter
+│   ├── core/         # Renderer interface + registry
+│   ├── utils/        # source / sniff / sanitize / zip-safety helpers
+│   ├── react/        # <Viewer /> + useViewer + useRegistry
 │   ├── renderer-pdf/
-│   ├── renderer-image/
-│   ├── renderer-video/
-│   ├── renderer-audio/
 │   ├── renderer-docx/
 │   ├── renderer-xlsx/
 │   ├── renderer-pptx/
+│   ├── renderer-image/
+│   ├── renderer-video/
+│   ├── renderer-audio/
 │   └── renderer-text/
 ├── apps/
-│   ├── demo/                 # Next.js demo → GitHub Pages
-│   └── docs/                 # TypeDoc output landing
-├── .github/workflows/        # CI + release + pages
-└── .changeset/
+│   └── demo/         # Next.js → GitHub Pages
+└── .github/workflows/  # CI · release · pages · security · dependabot
 ```
 
-## Development
+## 🗺️ Roadmap
 
-```bash
-pnpm install
-pnpm build           # build all libs
-pnpm test            # vitest across all packages
-pnpm typecheck       # tsc -b
-pnpm lint            # biome
-pnpm demo            # run demo on localhost:3000
-pnpm docs            # generate typedoc to ./docs-site
-```
+- [ ] Pixel-perfect PPTX (shape + image layout, not just text)
+- [ ] EPUB / FB2 ebook renderer
+- [ ] RTF / ODT renderer
+- [ ] Optional Web Worker for office formats (offload main-thread parsing)
+- [ ] Plugin: in-viewer search across PDF / DOCX
+- [ ] Plugin: annotation / highlight overlay
+- [ ] Solid / Vue / Svelte adapters
 
-## Security
+Got an idea? [Open a discussion](https://github.com/shubham8550/microscope-js/discussions).
 
-- All HTML produced by office renderers is run through DOMPurify with a hardened allowlist.
-- PPTX/DOCX archives are scanned for path-traversal entries (`..`, absolute paths) before extraction.
-- No renderer uses `eval`, `Function(...)`, `innerHTML` of unsanitized input, or `dangerouslySetInnerHTML` of user content.
-- See [SECURITY.md](./SECURITY.md) for reporting vulnerabilities.
+## 🤝 Contributing
 
-## Contributing
+PRs are welcome — see **[CONTRIBUTING.md](./CONTRIBUTING.md)**. Adding a new format is a copy of `packages/renderer-image` with a new `Renderer` object. The registry picks it up automatically.
 
-PRs welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md). Adding a new format is a copy-paste-modify of an existing renderer package.
+If this saved you a backend, **a star on [GitHub](https://github.com/shubham8550/microscope-js) goes a long way.** ⭐
 
-## License
+## ⭐ Star history
 
-MIT © microscope-js contributors
+[![Star history chart](https://api.star-history.com/svg?repos=shubham8550/microscope-js&type=Date)](https://star-history.com/#shubham8550/microscope-js&Date)
+
+## 📄 License
+
+[MIT](./LICENSE) © microscope-js contributors
+
+<sub>Built with [pnpm](https://pnpm.io) · [tsup](https://tsup.egoist.dev) · [Changesets](https://github.com/changesets/changesets) · [Biome](https://biomejs.dev) · [Vitest](https://vitest.dev) · [TypeDoc](https://typedoc.org). Published with [npm Trusted Publishers](https://docs.npmjs.com/trusted-publishers) + [SLSA provenance](https://slsa.dev/).</sub>
