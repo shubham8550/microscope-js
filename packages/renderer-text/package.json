@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-text",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Plain text / source-code renderer for microscope-js",
   "license": "MIT",
   "type": "module",

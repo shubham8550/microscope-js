@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-pdf",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "PDF renderer for microscope-js (uses pdfjs-dist)",
   "license": "MIT",
   "type": "module",

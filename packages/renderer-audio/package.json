@@ -1,6 +1,6 @@
 {
   "name": "@microscope-js/renderer-audio",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Audio renderer for microscope-js (mp3, wav, ogg, flac, aac, m4a)",
   "license": "MIT",
   "type": "module",
