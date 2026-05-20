@@ -36,11 +36,11 @@
   "devDependencies": {
     "@biomejs/biome": "^2.4.15",
     "@changesets/cli": "^2.27.11",
-    "@types/node": "^25.7.0",
+    "@types/node": "^25.9.1",
     "tsup": "^8.3.5",
     "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
-    "vitest": "^2.1.9"
+    "vitest": "^4.1.7"
   },
   "packageManager": "pnpm@9.15.0",
   "engines": {
