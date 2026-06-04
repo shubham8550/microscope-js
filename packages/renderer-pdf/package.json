@@ -28,7 +28,7 @@
   "dependencies": {
     "@microscope-js/core": "workspace:*",
     "@microscope-js/utils": "workspace:*",
-    "pdfjs-dist": "^5.7.284"
+    "pdfjs-dist": "^6.0.227"
   },
   "devDependencies": {
     "tsup": "^8.3.5",
