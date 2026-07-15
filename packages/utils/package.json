@@ -26,7 +26,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "dompurify": "^3.2.3"
+    "dompurify": "^3.4.12"
   },
   "devDependencies": {
     "@types/dompurify": "^3.2.0",
