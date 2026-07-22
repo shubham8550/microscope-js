@@ -34,13 +34,13 @@
     "clean": "pnpm -r exec rm -rf dist .turbo node_modules && rm -rf node_modules"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.15",
-    "@changesets/cli": "^2.27.11",
-    "@types/node": "^25.7.0",
+    "@biomejs/biome": "^2.5.5",
+    "@changesets/cli": "^2.31.1",
+    "@types/node": "^26.1.1",
     "tsup": "^8.3.5",
-    "typedoc": "^0.28.19",
-    "typescript": "^6.0.3",
-    "vitest": "^2.1.9"
+    "typedoc": "^0.28.20",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
   },
   "packageManager": "pnpm@9.15.0",
   "engines": {
